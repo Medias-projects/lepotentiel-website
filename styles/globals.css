@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html{
+    scroll-behavior: smooth;
+}
+
+.hero-grid{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-gap: 2rem;
+    
+}
+
+.horizontale-card{
+    display: grid;
+    grid-template-columns:30% 60%;
+    grid-gap: 2rem;
+}
+
+.article-grid{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-gap: 2rem;
+}
+
+@media(max-width: 992px){
+    .hero-grid{
+        grid-template-columns: 1fr;
+    }
+    .article-grid{
+        grid-template-columns: 1fr;
+    }
+}

@@ -57,7 +57,7 @@ function Drawer({ isOpen, setIsOpen }) {
     <div
       className={
         isOpen
-          ? "bg-black min-h-screen fixed top-0 w-[75%] p-4 transition-all duration-1000 delay-200 ease-in-out lg:hidden"
+          ? "bg-black min-h-screen fixed top-0 z-10 w-[75%] p-4 transition-all duration-1000 delay-200 ease-in-out lg:hidden"
           : "hidden"
       }
     >
