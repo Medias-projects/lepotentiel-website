@@ -10,7 +10,7 @@ type Props = {
   slug: string;
 };
 
-function Background({ title, category, image, uri, slug }: Props) {
+function BackgroundLarge({ title, category, image, uri, slug }: Props) {
   return (
     <Link
       href={{
@@ -25,14 +25,15 @@ function Background({ title, category, image, uri, slug }: Props) {
             alt={title}
             width={600}
             height={400}
-            className="h-[300px] object-fit"
+            layout="responsive"
+            className="object-fit"
           />
         </div>
         <div className="background-card__content absolute inset-0 flex flex-col justify-end p-4 bg-[rgba(0,0,0,.4)]">
-          <p className="background-card__category bg-primary w-1/2 md:w-1/3 text-white text-center font-semibold py-1 mb-2 text-md uppercase ">
+          <p className="background-card__category uppercase bg-primary w-1/2 md:w-1/3 text-white text-center font-semibold py-1 mb-2 text-md ">
             {category}
           </p>
-          <h3 className="background-card__title text-md text-white font-semibold mb-2 line-clamp-2 md:line-clamp-3">
+          <h3 className="background-card__title text-xl text-white font-semibold mb-2 line-clamp-2 md:line-clamp-3">
             {title}
           </h3>
         </div>
@@ -41,4 +42,4 @@ function Background({ title, category, image, uri, slug }: Props) {
   );
 }
 
-export default Background;
+export default BackgroundLarge;

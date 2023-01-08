@@ -8,10 +8,9 @@ module.exports = {
     extend: {
       colors: {
         primary: "#e5232c",
+        secondary: "#E5232C14",
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/line-clamp'),
-  ],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

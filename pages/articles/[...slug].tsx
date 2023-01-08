@@ -8,6 +8,7 @@ import { fetcher } from "../../graphql/utils";
 import Seo from "../../components/shared/Seo";
 import SocialsShareButtons from "../../components/shared/SocialsShareButtons";
 import Horizontale from "../../components/card/Horizontale";
+import ArticlesDetailLoader from "../../components/Loader/ArticleDetailLoader";
 
 function ArticlesDetail() {
   const router = useRouter();
@@ -16,6 +17,10 @@ function ArticlesDetail() {
   const id = slug && slug[3];
 
   const { article, ArticleLoading, error } = useArticle(id as string);
+
+  if (ArticleLoading) {
+    return <ArticlesDetailLoader />;
+  }
 
   return (
     <>
@@ -79,18 +84,18 @@ function ArticlesDetail() {
           <div className="similar-articles">
             <h2 className="text-2xl font-bold mb-6">Articles similaires</h2>
 
-            {article?.similarPosts[0]?.filter(
-              (item: any) => item.title !== article?.title
-            ).map((item: any) => (
-              <Horizontale
-                key={item.id}
-                title={item.title}
-                image={item.featuredImage?.node?.sourceUrl}
-                slug={item.slug}
-                category={article.categories}
-                uri={item.uri}
-              />
-            ))}
+            {article?.similarPosts[0]
+              ?.filter((item: any) => item.title !== article?.title)
+              .map((item: any) => (
+                <Horizontale
+                  key={item.id}
+                  title={item.title}
+                  image={item.featuredImage?.node?.sourceUrl}
+                  slug={item.slug}
+                  category={article.categories}
+                  uri={item.uri}
+                />
+              ))}
           </div>
         </div>
       </section>

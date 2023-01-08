@@ -4,7 +4,7 @@ import { fetcher } from "../graphql/utils";
 import { formatDate } from "../graphql/utils";
 
 export const useArticles = (offset: number) => {
-  const { data, isLoading, error } = useQuery(["articles", offset], () =>
+  const { data, isFetching, error } = useQuery(["articles", offset], () =>
     fetcher(`/api/articles?offset=${offset}`)
   );
 
@@ -14,7 +14,7 @@ export const useArticles = (offset: number) => {
         id: article?.id,
         title: article.title,
         category: article?.categories?.edges[0]?.node?.name,
-        image: article?.featuredImage?.node?.sourceUrl,
+        image: article?.featuredImage?.node?.sourceUrl ?? "/images/placeholder.png",
         date: formatDate(article.date),
         uri: article.uri,
         slug: article.slug,
@@ -22,5 +22,5 @@ export const useArticles = (offset: number) => {
     [data]
   );
 
-  return { articles, ArticleLoading: isLoading, error };
+  return { articles, ArticleLoading: isFetching, error };
 };
