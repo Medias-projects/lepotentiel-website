@@ -11,32 +11,32 @@ import { useArticlesByCategories } from "../hooks/useArticlesByCategories";
 
 export default function Home() {
   const { articles, ArticleLoading } = useArticles(11);
-  const { categories: nation, isLoading: nationLoading } =
+  const { categories: nation, isFetching: nationLoading } =
     useArticlesByCategories("nation", 10);
 
-  const { categories: international, isLoading: internationalLoading } =
+  const { categories: international, isFetching: internationalLoading } =
     useArticlesByCategories("international", 9);
 
-  const { categories: annonces, isLoading: annoncesLoading } =
+  const { categories: annonces, isFetching: annoncesLoading } =
     useArticlesByCategories("annonces", 10);
-  const { categories: sport, isLoading: sportLoading } =
+  const { categories: sport, isFetching: sportLoading } =
     useArticlesByCategories("sports", 10);
 
-  const { categories: aHauteVoix, isLoading: aHauteVoixLoading } =
+  const { categories: aHauteVoix, isFetching: aHauteVoixLoading } =
     useArticlesByCategories("a-haute-voix", 8);
-  const { categories: culture, isLoading: cultureLoading } =
+  const { categories: culture, isFetching: cultureLoading } =
     useArticlesByCategories("culture", 8);
-  const { categories: economie, isLoading: economieLoading } =
+  const { categories: economie, isFetching: economieLoading } =
     useArticlesByCategories("economie", 8);
-  const { categories: politique, isLoading: politiqueLoading } =
+  const { categories: politique, isFetching: politiqueLoading } =
     useArticlesByCategories("politique", 8);
-  const { categories: societe, isLoading: societeLoading } =
+  const { categories: societe, isFetching: societeLoading } =
     useArticlesByCategories("societe", 8);
-  const { categories: focus, isLoading: focusLoading } =
+  const { categories: focus, isFetching: focusLoading } =
     useArticlesByCategories("focus", 8);
-  const { categories: apostrophe, isLoading: apostropheLoading } =
+  const { categories: apostrophe, isFetching: apostropheLoading } =
     useArticlesByCategories("apostrophe", 8);
-  const { categories: cinqQuestion, isLoading: cinqQuestionLoading } =
+  const { categories: cinqQuestion, isFetching: cinqQuestionLoading } =
     useArticlesByCategories("cinq-questions", 8);
 
   return (
