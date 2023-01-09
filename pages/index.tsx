@@ -1,13 +1,16 @@
+import { lazy } from "react";
 import Seo from "../components/shared/Seo";
-import Hero from "../components/home/Hero";
-import Categorie from "../components/home/Categorie";
-import CategorieTwo from "../components/home/CategorieTwo";
-import CategorieThree from "../components/home/CategorieThree";
-import CategorieFour from "../components/home/CategorieFour";
-import CategorieFive from "../components/home/CategorieFive";
-import CategorieSix from "../components/home/CategorieSix";
+
 import { useArticles } from "../hooks/useArticles";
 import { useArticlesByCategories } from "../hooks/useArticlesByCategories";
+
+const Hero = lazy(() => import("../components/home/Hero"));
+const Categorie = lazy(() => import("../components/home/Categorie"));
+const CategorieTwo = lazy(() => import("../components/home/CategorieTwo"));
+const CategorieThree = lazy(() => import("../components/home/CategorieThree"));
+const CategorieFour = lazy(() => import("../components/home/CategorieFour"));
+const CategorieFive = lazy(() => import("../components/home/CategorieFive"));
+const CategorieSix = lazy(() => import("../components/home/CategorieSix"));
 
 export default function Home() {
   const { articles, ArticleLoading } = useArticles(11);
