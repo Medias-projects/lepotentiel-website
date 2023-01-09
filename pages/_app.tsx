@@ -53,8 +53,7 @@ export default function App({ Component, pageProps }: AppProps) {
             content="initial-scale=1.0, width=device-width"
           />
           <link rel="icon" href="/icon.png" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
+         
         </Head>
 
         <Layout>
