@@ -11,17 +11,30 @@ function Seo({ title, description, image }: Props) {
     <NextSeo
       title={title}
       description={description}
+      canonical="https://lepotentiel.cd/"
+      titleTemplate="Le Potentiel CD"
       openGraph={{
         type: "website",
         locale: "fr_FR",
         url: "https://lepotentiel.cd/",
-        site_name: "Le Potentiel",
+        site_name: "Le Potentiel CD",
         images: [
           {
-            url: `${image}`,
+            url: image as string,
             width: 800,
             height: 600,
-            alt: "Le Potentiel",
+            alt: "Le Potentiel image",
+          },
+          {
+            url: image as string,
+            width: 900,
+            height: 800,
+            alt: "Le Potentiel image",
+          },
+          {
+            url: image as string,
+            width: 800,
+            height: 600,
           },
         ],
       }}
