@@ -15,6 +15,7 @@ export const GET_POSTS = gql`
               caption
               mediaItemUrl
               sourceUrl
+              fileSize(size: MEDIUM)
             }
           }
           categories {
@@ -39,6 +40,7 @@ export const GET_CATEGORIES = gql`
           id
           name
           slug
+          
         }
       }
     }
@@ -60,6 +62,7 @@ export const GET_POSTS_BY_CATEGORY = gql`
               caption
               mediaItemUrl
               sourceUrl
+              fileSize(size: MEDIUM)
             }
           }
           categories {
@@ -87,6 +90,7 @@ export const GET_POST_BY_SLUG = gql`
           caption
           mediaItemUrl
           sourceUrl
+          fileSize(size: LARGE)
         }
       }
       auteur {

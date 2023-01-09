@@ -26,7 +26,7 @@ function BackgroundLarge({ title, category, image, uri, slug }: Props) {
             width={600}
             height={400}
             layout="responsive"
-            className="object-fit"
+            className="object-cover h-[400px] w-[600px]"
           />
         </div>
         <div className="background-card__content absolute inset-0 flex flex-col justify-end p-4 bg-[rgba(0,0,0,.4)]">

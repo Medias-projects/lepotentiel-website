@@ -43,22 +43,20 @@ function Footer() {
               <Link href="/">Accueil</Link>
             </li>
             <li className="text-white mb-4 hover:text-primary">
-              <Link href="/contact">Contact</Link>
+              <Link href="/">Contact</Link>
             </li>
             <li className="text-white mb-4 hover:text-primary">
-              <Link href="/a-propos">A Propos</Link>
+              <Link href="/">A Propos</Link>
             </li>
             <li className="text-white mb-4 hover:text-primary">
-              <Link href="/redaction">Rédaction</Link>
+              <Link href="/">Rédaction</Link>
             </li>
             <li className="text-white mb-4 hover:text-primary">
-              <Link href="/mentions-legales">Mentions Légales</Link>
+              <Link href="/">Mentions Légales</Link>
             </li>
 
             <li className="text-white mb-4 hover:text-primary">
-              <Link href="/politique-de-confidentialite">
-                Politique de Confidentialité
-              </Link>
+              <Link href="/">Politique de Confidentialité</Link>
             </li>
           </ul>
         </div>
@@ -66,13 +64,13 @@ function Footer() {
           <h3 className="text-white text-xl uppercase mb-6">Liens utiles</h3>
           <ul>
             <li className="text-white mb-4 hover:text-primary">
-              <Link href="/publicité">Publicité</Link>
+              <Link href="/">Publicité</Link>
             </li>
             <li className="text-white mb-4 hover:text-primary">
-              <Link href="/journal">Journal Papier</Link>
+              <Link href="/">Journal Papier</Link>
             </li>
             <li className="text-white mb-4 hover:text-primary">
-              <Link href="/articles-exlusifs">Articles exclusifs</Link>
+              <Link href="/">Articles exclusifs</Link>
             </li>
           </ul>
         </div>
