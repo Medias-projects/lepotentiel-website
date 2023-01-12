@@ -1,14 +1,17 @@
-import { lazy } from "react";
-import Seo from "../components/shared/Seo";
+import dynamic from "next/dynamic";
+
 import Hero from "../components/home/Hero";
-import Categorie from "../components/home/Categorie";
-import CategorieTwo from "../components/home/CategorieTwo";
-import CategorieThree from "../components/home/CategorieThree";
-import CategorieFour from "../components/home/CategorieFour";
-import CategorieFive from "../components/home/CategorieFive";
-import CategorieSix from "../components/home/CategorieSix";
 import { useArticles } from "../hooks/useArticles";
 import { useArticlesByCategories } from "../hooks/useArticlesByCategories";
+const Seo = dynamic(() => import("../components/shared/Seo"));
+const Categorie = dynamic(() => import("../components/home/Categorie"));
+const CategorieTwo = dynamic(() => import("../components/home/CategorieTwo"));
+const CategorieThree = dynamic(
+  () => import("../components/home/CategorieThree")
+);
+const CategorieFour = dynamic(() => import("../components/home/CategorieFour"));
+const CategorieFive = dynamic(() => import("../components/home/CategorieFive"));
+const CategorieSix = dynamic(() => import("../components/home/CategorieSix"));
 
 export default function Home() {
   const { articles, ArticleLoading } = useArticles(11);
