@@ -13,10 +13,7 @@ type Props = {
 function Search({ title, category, date, uri, slug }: Props) {
   return (
     <Link
-      href={{
-        pathname: `/articles/${uri}`,
-        query: { slug: slug },
-      }}
+      href={`/articles/${uri}`}
     >
       <article className="mb-8 border border-gray-200 bg-white p-4 md:w-[80%] ">
         <div className="horizontale-card__content  flex flex-col justify-center">

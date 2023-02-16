@@ -12,12 +12,7 @@ type Props = {
 
 function Verticale({ title, category, image, uri, slug }: Props) {
   return (
-    <Link
-      href={{
-        pathname: `/articles/${uri}`,
-        query: { slug: slug },
-      }}
-    >
+    <Link href={`/articles/${uri}`}>
       <article className="verticale-card min-h-[350px] shadow-md ">
         <div className="verticale-card__image">
           <Image

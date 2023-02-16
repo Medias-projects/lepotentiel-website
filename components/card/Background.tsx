@@ -13,19 +13,20 @@ type Props = {
 function Background({ title, category, image, uri, slug }: Props) {
   return (
     <Link
-      href={{
-        pathname: `/articles/${uri}`,
-        query: { slug: slug },
-      }}
+      href={`/articles/${uri}`}
     >
       <article className="background-card relative">
         <div className="background-card__image">
           <Image
             src={image}
             alt={title}
-            width={600}
-            height={400}
-            className="h-[300px] object-fit"
+            width={700}
+            height={475}
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
           />
         </div>
         <div className="background-card__content absolute inset-0 flex flex-col justify-end p-4 bg-[rgba(0,0,0,.4)]">

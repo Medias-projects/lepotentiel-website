@@ -13,10 +13,7 @@ type Props = {
 function Horizontale({ title, category, image, uri, slug }: Props) {
   return (
     <Link
-      href={{
-        pathname: `/articles/${uri}`,
-        query: { slug: slug },
-      }}
+      href={`/articles/${uri}`}
     >
       <article className="horizontale-card mb-8 border border-gray-200 bg-white ">
         <div className="horizontale-card__image">

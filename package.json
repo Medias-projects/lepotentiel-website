@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
   },
   "dependencies": {
@@ -15,6 +15,7 @@
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.10",
+    "cross-env": "^7.0.3",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
     "graphql": "^16.6.0",
@@ -25,6 +26,7 @@
     "nodemailer": "^6.8.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sharp": "^0.31.3",
     "typescript": "4.9.4"
   },
   "devDependencies": {
